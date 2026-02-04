@@ -33,21 +33,20 @@ export default function Header(props) {
                 {siteConfig('AUTHOR')}
               </div>
               <div
-                className='font-light dark:text-white py-2 hover:scale-105 transform duration-200 text-center'
+                className='font-light dark:text-white py-2 hover:scale-105 transform duration-200 text-center ml-[0.6rem]'
                 dangerouslySetInnerHTML={{
                   __html: siteConfig('SIMPLE_LOGO_DESCRIPTION', null, CONFIG)
                 }}
               />
+              <div className='ml-[1.1rem]'>
+                <SocialButton />
+              </div>
+              <div className='text-xs mt-2 text-gray-500 dark:text-gray-300 -ml-[0.5rem]'>
+                {siteConfig('DESCRIPTION')}
+              </div>
             </div>
           </div>
         </SmartLink>
-
-        <div className='flex justify-center'>
-          <SocialButton />
-        </div>
-        <div className='text-xs mt-4 text-gray-500 dark:text-gray-300'>
-          {siteConfig('DESCRIPTION')}
-        </div>
       </div>
     </header>
   )
